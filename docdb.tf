@@ -11,7 +11,7 @@
 # Creates Subnet Group Needed to host the docdb cluster 
 resource "aws_docdb_subnet_group" "docdb_subnet_group" {
   name       = "robot-${var.ENV}-docdb-subnet-group"
-  subnet_ids = data.terraform_remote_state.vpc.outputs.PRIVATE_SUBNET_IDS
+  subnet_ids = data.terraform_remote_state.vpc.output.PRIVATE_SUBNET_IDS
 
   tags = {
     Name = "robot-${var.ENV}-docdb-subnet-group"
