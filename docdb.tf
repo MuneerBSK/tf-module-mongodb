@@ -19,5 +19,5 @@ resource "aws_docdb_subnet_group" "docdb_subnet_group" {
 }
 
 output "output_ref" {
-  value = data.terraform_remote_state.remote.outputs.vpc
+  value = data.terraform_remote_state.outputs.vpc
 }
